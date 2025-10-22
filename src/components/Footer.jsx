@@ -1,19 +1,29 @@
-
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
-    return (
-        <div className='bg-slate-800 text-white flex flex-col justify-center items-center  w-full'>
-            <div className="logo font-bold text-white text-2xl">
-                <span className='text-green-500'> &lt;</span>
+  return (
+    <footer className="bg-slate-900 text-gray-200 flex flex-col justify-center items-center w-full py-4 border-t border-slate-700 shadow-inner">
+      {/* Logo */}
+      <div className="logo font-bold text-xl tracking-tight mb-1">
+        <span className="text-green-500">&lt;</span>
+        <span className="text-white">Pass</span>
+        <span className="text-green-500">OP/&gt;</span>
+      </div>
 
-                <span>Pass</span><span className='text-green-500'>OP/&gt;</span>
+      {/* Tagline */}
+      <p className="text-gray-400 text-xs mb-1">
+        Secure your passwords, simplify your life.
+      </p>
 
+      {/* Divider line */}
+      <div className="w-14 h-[2px] bg-green-500 rounded-full my-1"></div>
 
-            </div>
-            <div className='flex justify-center items-center'> Created with <img className='w-7 mx-2' src="icons/heart.png" alt="" /> by CodeWithHarry </div>
-        </div>
-    )
-}
+      {/* Copyright */}
+      <p className="text-[10px] text-gray-500">
+        © {new Date().getFullYear()} PassOP. All rights reserved.
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
